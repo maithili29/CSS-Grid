@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Grid3</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 1em;
+
+            /* here justify items will put the items at the start of the column ie horizontally. We can put the content at the end, at the center and by default it is stretch.*/
+            justify-items: stretch;
+
+            /* here align items will put the items at the start of the row ie vertically. We can put the items at the end, at the center and by default it is stretch.*/
+            align-items: stretch;
+
+        }
+
+        
+
+        .wrapper > div{
+            background: #eee;
+            padding: 1em;
+        }
+
+        .wrapper > div:nth-child(odd){
+            background: #ddd;
+        }
+
+        .box1{
+            /*here it will align it to itself and to other box*/
+            /*align-self: start;*/
+
+            /*This is two dimensional grid*/
+            
+            /*Here it will move from 1 to 3*/
+            grid-column: 1/3;
+            grid-row: 1/3;
+        }
+
+        .box2{
+            /*align-self: end;*/
+
+            /*Two dimensional grid*/
+            grid-column: 3;
+            grid-row: 1/3;
+        }
+
+        .box3{
+            /*justify-self: end;*/
+
+            /*here we can rearrange the grid as per our requirement.*/
+            grid-column: 2/4;
+            grid-row: 3;
+        }
+
+        .box4{
+            /*here overlapping of grid is done.*/
+            grid-column: 1;
+            grid-row: 2/4;
+            border: 2px solid #333;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Grids</title>
+    <style>
+        .wrapper{
+            display: grid;
+            /* here all the div will follow 70 and 30 percent pattern.*/
+            grid-template-columns: 70% 30%;
+            /*gap word is used to have the spacing or gaps between colums and rows.*/
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+
+            /*same as above*/
+            grid-gap: 1em;
+        }
+
+        /*here wrapper is the parent of the div i.e The style in the wrapper class will be applied to its child class only. */
+        .wrapper > div{
+            background: #eee;
+            padding: 1em;
+        }
+
+        .wrapper > div:nth-child(odd){
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nihil doloribus ipsum, enim dolorum architecto ex in maiores veritatis commodi, debitis explicabo quibusdam nesciunt et molestiae quos nobis laudantium optio mollitia culpa cumque. Provident dolorum voluptatibus commodi officiis ullam totam ipsum quos, eius corporis, a, obcaecati quis nihil magnam possimus excepturi fugit illo! Soluta quisquam voluptatibus magni aspernatur voluptas temporibus amet blanditiis molestias perspiciatis sit fuga tenetur dignissimos non molestiae corrupti, distinctio ullam consequuntur animi! Commodi repellendus minus quia doloremque. Omnis qui amet quo fugit voluptates voluptas repellendus ipsam quos nesciunt, maiores laboriosam, delectus reiciendis at alias quas soluta molestias aut minus doloremque temporibus odio fuga facilis magnam tenetur! Expedita temporibus quam nemo distinctio nostrum!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima sapiente dolore ut amet aliquam ipsa ullam! Magnam dolorem ipsum, fugiat impedit et sit praesentium aliquam rerum quaerat, consectetur nulla? Ex distinctio magni quam dolorum, in laboriosam sed id. Id saepe totam alias, veniam assumenda optio. Veritatis quibusdam ullam quod.
+        </div>
+
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nihil doloribus ipsum, enim dolorum architecto ex in maiores veritatis commodi, debitis explicabo quibusdam nesciunt et molestiae quos nobis laudantium optio mollitia culpa cumque. Provident dolorum voluptatibus commodi officiis ullam totam ipsum quos, eius corporis, a, obcaecati quis nihil magnam possimus excepturi fugit illo! Soluta quisquam voluptatibus magni aspernatur voluptas temporibus amet blanditiis molestias perspiciatis sit fuga tenetur dignissimos non molestiae corrupti, distinctio ullam consequuntur animi! Commodi repellendus minus quia doloremque. Omnis qui amet quo fugit voluptates voluptas repellendus ipsam quos nesciunt, maiores laboriosam, delectus reiciendis at alias quas soluta molestias aut minus doloremque temporibus odio fuga facilis magnam tenetur! Expedita temporibus quam nemo distinctio nostrum!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima sapiente dolore ut amet aliquam ipsa ullam! Magnam dolorem ipsum, fugiat impedit et sit praesentium aliquam rerum quaerat, consectetur nulla? Ex distinctio magni quam dolorum, in laboriosam sed id. Id saepe totam alias, veniam assumenda optio. Veritatis quibusdam ullam quod.
+        </div>
+    </div>
+</body>
+</html>
+
